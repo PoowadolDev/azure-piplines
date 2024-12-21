@@ -1,8 +1,7 @@
 trigger:
  - main
 
-pool:
-  vmImage: Self-Host
+pool: Self-Host
 
 steps:
 - task: Maven@4
