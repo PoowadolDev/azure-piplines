@@ -3,19 +3,10 @@ trigger:
     include:
       - main
 
-resources:
-  repositories:
-    - repository: MyFirstPython
-      name: PoowadolDev/SimpleFastAPI-Python
-      endpoint: MyGitHubServiceConnection
-      type: github
-      ref: main
-
 pool: Self-Host
 
 jobs:
-  - job: Clone
+  - job:
     steps:
-      - checkout: MyFirstPython
-        displayName: checkout SimpleFast
-        continueOnError: false
+    - script: git clone --branch main https://github.com/PoowadolDev/SimpleFastAPI-Python.git
+    displayName: 'Clone Source Code Repo'
