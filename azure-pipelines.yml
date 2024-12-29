@@ -5,9 +5,10 @@ trigger:
 
 resources:
   repositories:
-    - repository: SimpleFastAPI-Python
-      name: SimpleFastAPI
-      type: git
+    - repository: MyFirstPython
+      name: PoowadolDev/SimpleFastAPI-Python
+      endpoint: MyGitHubServiceConnection
+      type: github
       ref: main
 
 pool: Self-Host
@@ -15,6 +16,6 @@ pool: Self-Host
 jobs:
   - job: Clone
     steps:
-      - checkout: SimpleFastAPI-Python
+      - checkout: MyFirstPython
         displayName: checkout SimpleFast
         continueOnError: false
