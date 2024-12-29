@@ -9,4 +9,11 @@ jobs:
   - job:
     steps:
     - script: git clone --branch main https://github.com/PoowadolDev/SimpleFastAPI-Python.git
-    displayName: 'Clone Source Code Repo'
+      displayName: 'Clone Source Code Repo'
+
+    - task:
+      displayName: 'Clean Build Directory'
+      inputs:
+        SourceFolder: '$(Build.SourcesDirectory)'
+        Contents: '**/*'
+        RemoveSourceFolder: false
