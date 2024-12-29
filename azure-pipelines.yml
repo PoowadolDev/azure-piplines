@@ -5,7 +5,7 @@ trigger:
 
 resources:
   repositories:
-    - repository: simplefastapi-python
+    - repository: SimpleFastAPI-Python
       name: SimpleFastAPI
       type: git
       ref: main
