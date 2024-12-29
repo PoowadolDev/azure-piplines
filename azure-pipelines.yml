@@ -14,10 +14,15 @@ jobs:
     - script: |
         cd SimpleFastAPI-Python
         python -m venv venv
-        source venv/bin/activate
+        venv/bin/activate
         pip install -r requirements.txt
+      displayName: 'Install Dependencies'
+
+    - script: |
+        cd SimpleFastAPI-Python
+        venv/bin/activate
         pytest
-      displayName: 'Install Dependencies and Run Tests'
+      displayName: 'Run Tests'
 
     - task: DeleteFiles@1
       displayName: 'Clean Build Directory'
