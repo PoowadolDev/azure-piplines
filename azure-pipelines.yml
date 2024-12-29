@@ -8,10 +8,10 @@ pool: Self-Host
 jobs:
   - job:
     steps:
-    - script: git clone --branch main https://github.com/PoowadolDev/SimpleFastAPI-Python.git
+    - script: git clone --branch main --depth 1 https://github.com/PoowadolDev/SimpleFastAPI-Python.git
       displayName: 'Clone Source Code Repo'
 
-    - task:
+    - task: DeleteFiles@1
       displayName: 'Clean Build Directory'
       inputs:
         SourceFolder: '$(Build.SourcesDirectory)'
