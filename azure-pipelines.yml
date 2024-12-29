@@ -26,6 +26,7 @@ jobs:
 
     - task: DeleteFiles@1
       displayName: 'Clean Build Directory'
+      condition: always()
       inputs:
         SourceFolder: '$(Build.SourcesDirectory)'
         Contents: '**/*'
